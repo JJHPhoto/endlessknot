@@ -1,6 +1,25 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var wordbank = "";
+
+// My Charcarter types that feed into my wordbank. 
+var num = "1234567890";
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var symbols = "`!@#$%^&*()_+=-";
+
+//Wordbank feeder.
+wordbank += num;
+wordbank += lowercase;
+wordbank += uppercase;
+wordbank += lowercase;
+
+console.log (wordbank);
+
+// Wordbank writer (?)
+
+
 //What do I need? 
 // var of Numbers
 // var of LowercCase
@@ -19,6 +38,9 @@ function writePassword() {
 
 
   //Need to WRITE variables to 'password' when selected
+
+  //Need to CONFIRM all variables are used that the user selects. 
+  //If 'no' to all, tell user they need to select "TryAgain"
 
   //if 'usedNumbers' 
   //then .... write? how?
