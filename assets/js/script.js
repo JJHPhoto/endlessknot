@@ -22,6 +22,7 @@ console.log (wordbank);
 // Write password to the #password input
 function writePassword() {
   //PROMPT for criteria (password length)
+  //if 'false' ( ! (passwordRequires >= 8 || passwordRequires <= 128) ) PROMPT user with "Please pick a longer/shorter password."
   var pwdLength = prompt ("How long do you want your password to be?");
   // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
   //PROMPT length of 'passwordRequires'. 8 <= %% => 128.
@@ -32,9 +33,8 @@ function writePassword() {
   var pwdsymbols = confirm ("And to finish it off, how about some symbols?");
   
   //WRITE characterTypes to password. 
-  //generatePassword to the page.
-
-  //if 'false' ( ! (passwordRequires >= 8 || passwordRequires <= 128) ) PROMPT user with "Please pick a longer/shorter password."
+  //generatePassword to the page. 
+  //Need to DEFINE generatePassword. 
 
 
   //Need to WRITE variables to 'password' when selected
@@ -68,4 +68,4 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-// I think I need to be able to have a "TryAgainbutton" if the user is not satisfied
+// I think I need to be able to have a "TryAgainbutton" if the user is not satisfied. How do I loop back to the begining without needing to just refresh the page? 
