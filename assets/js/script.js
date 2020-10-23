@@ -13,24 +13,24 @@ var symbols = "`!@#$%^&*()_+=-";
 wordbank += num;
 wordbank += lowercase;
 wordbank += uppercase;
-wordbank += lowercase;
+wordbank += symbols;
 
 console.log (wordbank);
 
-// Wordbank writer (?)
-
-
-//What do I need? 
-// var of Numbers
-// var of LowercCase
-// var of UpperCase
-// var of ZpecialCharacters
+// Wordbank writer (?) Need to figure out how to pull from here. 
 
 // Write password to the #password input
 function writePassword() {
-  //PROMPT about criteria needed? 
+  //PROMPT for criteria (password length)
+  var pwdLength = prompt ("How long do you want your password to be?");
+  // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
   //PROMPT length of 'passwordRequires'. 8 <= %% => 128.
   //PROMPT if LowerCase, UpperCase, Number, or SpecialCharacters are wanted.
+  var pwdNumbers = confirm ("Would you like to include numbers?");
+  var pwdLowerCase = confirm ("How about lower case letters?");
+  var pwdUpperCase = confirm ("Maybe some upper case letters?");
+  var pwdsymbols = confirm ("And to finish it off, how about some symbols?");
+  
   //WRITE characterTypes to password. 
   //generatePassword to the page.
 
