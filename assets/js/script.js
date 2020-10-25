@@ -4,33 +4,39 @@ var generateBtn = document.querySelector("#generate");
 var wordbank = "";
 
 // My Charcarter types that feed into my wordbank. 
-var num = "1234567890";
+var numbers = "1234567890";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var symbols = "`!@#$%^&*()_+=-";
 
-//Wordbank feeder.
-wordbank += num;
+//Wordbank getting fed.
+wordbank += numbers;
 wordbank += lowercase;
 wordbank += uppercase;
 wordbank += symbols;
 
-console.log (wordbank);
+// console.log (wordbank);
 
-// Wordbank writer (?) Need to figure out how to pull from here. 
-
-// Write password to the #password input
+// Writes the password
 function writePassword() {
   //PROMPT for criteria (password length)
-  //if 'false' ( ! (passwordRequires >= 8 || passwordRequires <= 128) ) PROMPT user with "Please pick a longer/shorter password."
   var pwdLength = prompt ("How long do you want your password to be? (Please pick a length between 8-128.)");
-  // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
-  //PROMPT length of 'passwordRequires'. 8 <= %% => 128.
-  //PROMPT if LowerCase, UpperCase, Number, or SpecialCharacters are wanted.
+
+  //PROMPT If the user doesn't pick a password long enough. 
+  if ( ! (pwdLength <= 8 && pwdLength <= 128) );
+    prompt ("That password length is incorrect. Please pick a password with a lenght of 8-128.")
+    return; 
+    // Not sure why this math works. 
+
+
+
+  //CONFIRM if LowerCase, UpperCase, Number, or SpecialCharacters are wanted.
   var pwdNumbers = confirm ("Would you like to include numbers?");
   var pwdLowerCase = confirm ("How about lower case letters?");
   var pwdUpperCase = confirm ("Maybe some upper case letters?");
-  var pwdsymbols = confirm ("And to finish it off, how about some symbols?");
+  var pwdSymbols = confirm ("And to finish it off, how about some symbols?");
+
+    // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
   
   //WRITE characterTypes to password. 
   //generatePassword to the page. 
