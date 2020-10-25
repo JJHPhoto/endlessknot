@@ -23,7 +23,7 @@ console.log (wordbank);
 function writePassword() {
   //PROMPT for criteria (password length)
   //if 'false' ( ! (passwordRequires >= 8 || passwordRequires <= 128) ) PROMPT user with "Please pick a longer/shorter password."
-  var pwdLength = prompt ("How long do you want your password to be?");
+  var pwdLength = prompt ("How long do you want your password to be? (Please pick a length between 8-128.)");
   // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
   //PROMPT length of 'passwordRequires'. 8 <= %% => 128.
   //PROMPT if LowerCase, UpperCase, Number, or SpecialCharacters are wanted.
