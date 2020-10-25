@@ -72,17 +72,4 @@ function generatePassword() {
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-      // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
-    
-    //WRITE characterTypes to password. 
-    //generatePassword to the page.  
-  
-    //Need to WRITE variables to 'password' when selected
-  
-    //Need to CONFIRM all variables are used that the user selects. 
-    //If 'no' to all, tell user they need to select "TryAgain"
-
-    // I think I need to be able to have a "TryAgainbutton" if the user is not satisfied. How do I loop back to the begining without needing to just refresh the page 
