@@ -5,11 +5,10 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
+//Variable to pool my characters. 
 var wordbank = "";
 
 // My Charcarter types that feed into my wordbank. 
@@ -23,15 +22,14 @@ wordbank += numbers;
 wordbank += lowercase;
 wordbank += uppercase;
 wordbank += symbols;
-
 // console.log (wordbank);
 
 function generatePassword() { 
     //PROMPT for criteria (password length)
-    var pwdLength = prompt ("How long do you want your password to be? (Needs to be between 8-128 to be secure.)");
+    var pwdLength = parseInt(prompt("How long do you want your password to be? (Needs to be between 8-128 to be secure.)") );
 
     //PROMPT If the user doesn't pick a password long enough. 
-    if ( ! (pwdLength >= 8 || pwdLength <= 128) ); {
+    if (pwdLength < 8 || pwdLength > 128); {
       alert ("Please pick a password with a length of 8-128.")
       // console.log (pwdLength);
       //Not accepting any "correct" numbers, but it is in the console.log Maybe need to build out more. 
@@ -63,14 +61,24 @@ function generatePassword() {
       // console.log (getsymbols); 
     }
   
-  
-  
+    for (var i = 0; i < pwdLength; i++) {
+      var pulledCharacters = wordbank[Math.floor(Math.random() * wordbank.length)];
+      password += pulledCharacters;
+    }
+    console.log (pulledCharacters)
+    //pulling the correct number, just in a object block. 
+    return password;
+
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
       // I need to write in any selected criterai (num, lowercase, uppercase, symbols) + pulling from the wordbank randomly. 
     
     //WRITE characterTypes to password. 
-    //generatePassword to the page. 
-    //Need to DEFINE generatePassword. 
-  
+    //generatePassword to the page.  
   
     //Need to WRITE variables to 'password' when selected
   
@@ -78,8 +86,3 @@ function generatePassword() {
     //If 'no' to all, tell user they need to select "TryAgain"
 
     // I think I need to be able to have a "TryAgainbutton" if the user is not satisfied. How do I loop back to the begining without needing to just refresh the page 
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
