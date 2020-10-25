@@ -1,6 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Writes the password
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
 var wordbank = "";
 
 // My Charcarter types that feed into my wordbank. 
@@ -16,15 +25,6 @@ wordbank += uppercase;
 wordbank += symbols;
 
 // console.log (wordbank);
-
-// Writes the password
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 function generatePassword() { 
     //PROMPT for criteria (password length)
