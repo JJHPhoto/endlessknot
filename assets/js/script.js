@@ -66,6 +66,14 @@ function generatePassword() {
       wordbank = wordbank.concat(symbols);
       console.log (symbols); 
     }
+  
+    for (var i = 0; i < pwdLength; i++) {
+      var pulledCharacters = wordbank[Math.floor(Math.random() * wordbank.length)];
+      password += pulledCharacters;
+      console.log (pulledCharacters);
+      }
+    
+      return password; 
 
 
 }
