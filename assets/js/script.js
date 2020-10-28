@@ -69,6 +69,9 @@ function generatePassword() {
       console.log (symbols); 
     }
   
+  //Need to put in an if/else statement here for variables selected. 
+
+  
   //For loop to get the password length. 
   for (var i = 0; i < pwdLength; i++) {
       var pulledCharacters = wordbank[Math.floor(Math.random() * wordbank.length)];
