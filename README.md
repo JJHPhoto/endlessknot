@@ -10,7 +10,7 @@ It took me much longer to complete this than I expected. I was trying to jam too
 
 ### 3. Resources
 
-My study group. Thank you so much Ian, Thomas & Macz! 
+My study group. Thank you so much Ian, Thomas & Macz! I 100% would not have been able to finish this without these 3!
 
 [JavaScript Password Generator by Traversy Media](https://www.youtube.com/watch?v=duNmhKgtcsI)
 
@@ -20,4 +20,4 @@ My study group. Thank you so much Ian, Thomas & Macz!
 
 In these screenshots, I selected upper case letters and numbers. 
 
-![Image] (./assets/images/EndlessKnot.jpg)
+![Image](./assets/images/EndlessKnot.jpg)
