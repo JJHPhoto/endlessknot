@@ -37,11 +37,13 @@ function generatePassword() {
   var pwdLength = parseInt(prompt("How long do you want your password to be? It needs to be between 8-128 to be secure.") );
   console.log(pwdLength);
 
-  if (pwdLength <= 8 || pwdLength >= 128) {
+  if (pwdLength < 8 || pwdLength > 128) {
     alert("Please pick a password with a length between 8-128.");
     return; 
   }
   
+  var password = ""; 
+
   //CONFIRM if LowerCase, UpperCase, Number, or SpecialCharacters are wanted.
   var pwdNumbers = confirm ("Would you like to include numbers?");
   if (pwdNumbers === true) {
@@ -72,9 +74,7 @@ function generatePassword() {
       var pulledCharacters = wordbank[Math.floor(Math.random() * wordbank.length)];
       password += pulledCharacters;
       console.log (pulledCharacters);
-      // return password;
       }
     
-    // return password; 
     return password 
 }
