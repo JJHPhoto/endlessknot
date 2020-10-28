@@ -16,6 +16,8 @@ My study group. Thank you so much Ian, Thomas & Macz!
 
 [Build a Password Generator with JavaScript by Web Dev Simplified](https://www.youtube.com/watch?v=iKo9pDKKHnc)
 
-### Screenshot
+### 4. Screenshot of my password generator at work. 
 
-![Image] (./assets/images/)
+In these screenshots, I selected upper case letters and numbers. 
+
+![Image] (./assets/images/EndlessKnot.jpg)
