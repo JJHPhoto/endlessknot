@@ -19,18 +19,10 @@ generateBtn.addEventListener("click", writePassword);
 //My Character array. 
 var wordbank = [];
 
-var numbers = "1234567890";
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var symbols = "`!@#$%^&*()_+=-";
-
-//Wordbank getting fed.
-wordbank += numbers;
-wordbank += lowercase;
-wordbank += uppercase;
-wordbank += symbols;
-
-console.log(wordbank);
+var numbers = "1234567890".split("");
+var lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var symbols = "`!@#$%^&*()_+=-".split("");
 
 //Function to generate the password. 
 function generatePassword() {
@@ -68,10 +60,7 @@ function generatePassword() {
       wordbank = wordbank.concat(symbols);
       console.log (symbols); 
     }
-  
-  //Need to put in an if/else statement here for variables selected. 
 
-  
   //For loop to get the password length. 
   for (var i = 0; i < pwdLength; i++) {
       var pulledCharacters = wordbank[Math.floor(Math.random() * wordbank.length)];
